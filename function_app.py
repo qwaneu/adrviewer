@@ -7,20 +7,13 @@ app = func.FunctionApp(http_auth_level=func.AuthLevel.ANONYMOUS)
 def adr_viewer(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
 
-    name = req.params.get('name')
-    if not name:
-        try:
-            req_body = req.get_json()
-        except ValueError:
-            pass
-        else:
-            name = req_body.get('name')
+    name = req.params.get('record-id')
 
     if name:
-        return func.HttpResponse(f"<h1>Hello, {name}. This HTTP triggered function executed successfully.</h1>")
+        return func.HttpResponse("converted-to-html: 0001-FirstAdr")
     else:
         return func.HttpResponse(
-             "<p><em>This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.</em></p>",
-             headers={"Content-Type": "text/html"},
-             status_code=200
+            "<p><em>This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.</em></p>",
+            headers={"Content-Type": "text/html"},
+            status_code=401
         )

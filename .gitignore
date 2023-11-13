@@ -49,6 +49,7 @@ coverage.xml
 *.cover
 .hypothesis/
 .pytest_cache/
+.reports/
 
 # Translations
 *.mo
@@ -97,7 +98,6 @@ celerybeat-schedule
 
 # Environments
 .env
-.venv
 env/
 venv/
 ENV/
@@ -133,3 +133,4 @@ __blobstorage__
 __queuestorage__
 __azurite_db*__.json
 .python_packages
+reports/
