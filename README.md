@@ -54,3 +54,88 @@ So the idea is to
 And of course, you'll test drive the function.
 
 ![adr viewer](images/Adrviewer.svg)
+
+
+# Preparing the exercise
+
+In order to be able to work on the exercise you will need to:
+
+* install python
+* install azure cli
+* install the Azure Functions Core tools
+* install visual studio code
+* install the Azure Functions extension for visual studio code 
+
+## install python
+
+Install python 3.12.0 from [https://www.python.org/downloads/](https://www.python.org/downloads/)
+
+## install azure cli
+
+Go to the [How to install Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli) page for instructions.
+
+## install the Azure Functions Core tools
+
+Go to the [Develop Azure Functions Locally using Core tools](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=linux%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-python#install-the-azure-functions-core-tools) page for instructions.
+
+## install visual studio code
+
+Install visual studio code from [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
+
+
+## install the Azure Functions extension for visual studio code 
+
+Open visual studio code. hit ctrl-p and type: `ext install ms-azuretools.vscode-azurefunctions`
+
+## Open this project and get started
+
+Open this project in vs code. Then open a terminal (preferrably bash). Create a virtual environment:
+
+```bash
+python -m venv venv
+```
+
+Close the terminal and open it again. Code should have activated the environment, by running
+
+```bash
+source <absolute path to>venv/bin/activate 
+```
+If not, activate it yourself.
+
+Now install the dependencies:
+
+```bash
+pip install -r requirements.txt -r requirements-dev.txt
+```
+
+You should now be able to 
+
+1. Run the tests
+
+```bash
+./run-test.sh watch
+```
+
+2. Run the function locally
+
+```bash
+./run-local.sh
+```
+
+3. Create the function app in the cloud
+
+First login to Azure 
+
+```bash
+az login
+```
+
+```bash
+./provision-funcion-app.sh
+```
+
+3. Deploy the function app in the cloud
+
+```bash
+./publish-app.sh
+```
