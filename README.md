@@ -68,7 +68,9 @@ In order to be able to work on the exercise you will need to:
 
 ## install python
 
-Install python 3.12.0 from [https://www.python.org/downloads/](https://www.python.org/downloads/)
+Install python __3.11.6__ from [https://www.python.org/downloads/](https://www.python.org/downloads/)
+
+It is important to use the suggested version. At the time of this writing azure functions does not accept 3.12 yet
 
 ## install azure cli
 
@@ -115,6 +117,8 @@ You should now be able to
 ```bash
 ./run-test.sh watch
 ```
+
+On windows you may need to create your own script on powershell. The way you set PYTHONPATH on windows is a bit different.
 
 2. Run the function locally
 

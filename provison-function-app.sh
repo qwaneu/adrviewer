@@ -26,5 +26,5 @@ az functionapp create --name $functionApp \
     --resource-group $resourceGroup \
     --functions-version $functionsVersion \
     --runtime python \
-    --runtime-version "3.10" \
+    --runtime-version "3.11" \
     --os-type Linux
