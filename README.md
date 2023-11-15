@@ -143,3 +143,9 @@ az login
 ```bash
 ./publish-app.sh
 ```
+
+# Useful libraries for the functionality
+
+* requests [https://pypi.org/project/requests/](https://pypi.org/project/requests/)
+* markdown [https://pypi.org/project/Markdown/](https://pypi.org/project/Markdown/)
+* d3.js for rendering fancy stuff in javascript
