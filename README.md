@@ -137,6 +137,8 @@ az login
 ```bash
 ./provision-funcion-app.sh
 ```
+Maybe, while your at it, you can 'terraform' the provisioning as well.
+
 
 3. Deploy the function app in the cloud
 
@@ -149,3 +151,4 @@ az login
 * requests [https://pypi.org/project/requests/](https://pypi.org/project/requests/)
 * markdown [https://pypi.org/project/Markdown/](https://pypi.org/project/Markdown/)
 * d3.js for rendering fancy stuff in javascript
+
